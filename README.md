@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Alexandra Zavala
 
 ## Homework
@@ -20,3 +21,6 @@
 - [Lab 7](labs/lab7.md)
 - [Lab 8](labs/lab8.md)
 
+=======
+# Zavala_GEOG676
+>>>>>>> c3f9d3430487bf53cf150afd3d872a115674b073
