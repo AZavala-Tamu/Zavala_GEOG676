@@ -1,0 +1,12 @@
+##create the list
+part3 = [146, 875, 911, 83, 81, 439, 44, 5, 46, 76, 61, 68, 1, 14, 38, 26, 21] 
+
+##create container to call 
+EvenValues = 0
+
+##create loop for each iteration
+for i in part3:
+    if i % 2 ==0:
+        EvenValues = EvenValues + i
+
+print (EvenValues)
