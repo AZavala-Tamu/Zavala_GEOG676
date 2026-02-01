@@ -1,0 +1,37 @@
+##establish a list
+part1 = [1,2,4,8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
+
+##create container for final result
+result = 1
+
+##create loop to iterate through list
+for i in part1:
+    result = result * i
+
+##print final result
+print("Answer to Question 1 is: ", result)
+
+##PART2
+##establish the list
+part2 = [-1, 23, 483, 8573, -13847, -381569, 1652337, 718522177]
+
+##place the sum in as new variable
+part2_sum = sum(part2)
+
+##Call final answwer
+print ('Answer to Question 2 is: ', part2_sum)
+
+##PART3
+##create the list
+
+part3 = [146, 875, 911, 83, 81, 439, 44, 5, 46, 76, 61, 68, 1, 14, 38, 26, 21] 
+
+##create container to call 
+EvenValues = 0
+
+##create loop for each iteration
+for i in part3:
+    if i % 2 ==0:
+        EvenValues = EvenValues + i
+
+print ("Answer to Question 3 is: ", EvenValues)

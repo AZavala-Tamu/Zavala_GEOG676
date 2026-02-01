@@ -1,8 +1,0 @@
-##establish the list
-part2 = [-1, 23, 483, 8573, -13847, -381569, 1652337, 718522177]
-
-##place the sum in as new variable
-part2_sum = sum(part2)
-
-##Call final answwer
-print (part2_sum)
