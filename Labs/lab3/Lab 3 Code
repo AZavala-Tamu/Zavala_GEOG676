@@ -1,0 +1,58 @@
+import math
+
+##create overarching shape class to put each one in
+class Shape:
+    def getArea(self):
+        pass
+
+##define the rectangle class
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def getArea(self):
+        return(self.length * self.width)
+    
+##define the triangle class
+class Triangle(Shape):
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+
+    def getArea(self):
+        return(.5*self.base*self.height)
+
+##define the circle class 
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def getArea(self):
+        return (3.14159 * self.radius **2)
+    
+##specify the string to their respective class    
+shape_descriptions = {
+        "Rectangle" : Rectangle,
+        "Triangle" : Triangle,
+        "Circle" : Circle }
+
+##create empty shape contianer
+shapes = []
+
+##open the file 
+with open(r"C:\DevSource\Zavala_Lab1_GEOG676\Labs\lab3\shape.txt", "r") as file:
+        for line in file:
+            line = line.strip()
+            tokens = line.split (",")
+
+            shape_name = tokens[0]
+            dimensions = [float(x) for x in tokens[1:]]
+
+            if shape_name in shape_descriptions:
+                shape_class = shape_descriptions[shape_name]
+                shape_object = shape_class(*dimensions)
+                shapes.append(shape_object)
+##print out desired areas 
+for shape in shapes:
+    print(f"{shape.__class__.__name__} area: {shape.getArea():.2f}")
